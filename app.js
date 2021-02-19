@@ -1,53 +1,67 @@
-// Book Class:  Represents a Book
 class Book {
-    constructor(title, author, page) {
+    constructor(title, author, pages) {
         this.title = title;
         this.author = author;
-        this.page = page;
+        this.pages = pages;
     }
 }
-// UI Class: Handle UI Tasks
+
 class UI {
-    static displayBooks() {
+    addBooksToList(book) {
 
-        const StoredBooks = [
-            {
-                title: "Book one",
-                author: 'Jhon Doe',
-                page: 120
-            },
-            {
-                title: "Book Two",
-                author: 'Jane Doe',
-                page: 145
-            }
-        ];
-
-        const books = StoredBooks;
-
-        books.forEach ((book) => UI.addBookToList (book));
-    }
-      static addBookToList(book) {
-        const list = document.querySelector('#book-list');
-
+        const list = document.getElementById('book-list');
         const row = document.createElement('tr');
-
         row.innerHTML = `
-          <td>${book.title}</td>
-          <td>${book.author}</td>
-          <td>${book.page}</td>
-          <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
-        `;
+    
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.pages}</td>
+        <td><a href="" class="delete">X</a></td>
 
-        list.appendChild(row);
-      }
+        `;
+    list.appendChild(row);
+    }
+
+deleteBook(target) {
+    if(target.className === 'delete'){
+        target.parentElement.parentElement.remove();
+    }
 }
 
+clearFields(){
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+    document.getElementById('pages').value = '';
+}
+}
 
-// Store class: HAndless Storage
+// Event Listening
 
-// Event: Display Books
-document.addEventListener('DOMContentLoaded', UI.displayBooks);
-// Event: Add a Book
+document.getElementById('book-form').addEventListener('submit', function(e){
+    //Get form values
 
-// Event: Remove a Book
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const pages = document.getElementById('pages').value;
+
+    //Intantiate book
+    const book = new Book(title, author, pages);
+
+    //Instantiate UI
+    const ui = new UI();
+
+    //Validate
+    if(title === '' || author === '' || pages === '') {
+
+        alert("Please fill the fields");
+
+    } else {
+
+        // Add book to list
+        ui.addBooksToList(book);
+
+        // Clear Fields
+        ui.clearFields();
+    }
+        e.preventDefault();
+});
