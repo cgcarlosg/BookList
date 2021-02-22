@@ -1,67 +1,35 @@
-class Book {
-    constructor(title, author, pages) {
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-    }
-}
+// Variables
+const myLibrary = [];
+const titleInput = document.querySelector("#title");
+const authorInput = document.querySelector("#author");
+const pagesInput = document.querySelector("#pages");
+const button = document.querySelector(".btn");
+const bookList = document.querySelector("#book-list");
 
-class UI {
-    addBooksToList(book) {
+// events
 
-        const list = document.getElementById('book-list');
-        const row = document.createElement('tr');
-        row.innerHTML = `
-    
-        <td>${book.title}</td>
-        <td>${book.author}</td>
-        <td>${book.pages}</td>
-        <td><a href="" class="delete">X</a></td>
-
-        `;
-    list.appendChild(row);
-    }
-
-deleteBook(target) {
-    if(target.className === 'delete'){
-        target.parentElement.parentElement.remove();
-    }
-}
-
-clearFields(){
-    document.getElementById('title').value = '';
-    document.getElementById('author').value = '';
-    document.getElementById('pages').value = '';
-}
-}
-
-// Event Listening
-
-document.getElementById('book-form').addEventListener('submit', function(e){
-    //Get form values
-
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const pages = document.getElementById('pages').value;
-
-    //Intantiate book
-    const book = new Book(title, author, pages);
-
-    //Instantiate UI
-    const ui = new UI();
-
-    //Validate
-    if(title === '' || author === '' || pages === '') {
-
-        alert("Please fill the fields");
-
+button.addEventListener("click", function(){
+  if (
+    titleInput.value == "" && 
+    authorInput.value == "" && 
+    pagesInput.value == ""
+    ) {
+        alert("Enter any input");
     } else {
+        const bookListRow = document.createElement("tr");
 
-        // Add book to list
-        ui.addBooksToList(book);
+        const newTitle = document.createElement("th");
+        newTitle.innerHTML = titleInput.value;
+        bookListRow.appendChild(newTitle);
 
-        // Clear Fields
-        ui.clearFields();
+        const newAuthor = document.createElement("th");
+        newAuthor.innerHTML = authorInput.value;
+        bookListRow.appendChild(newAuthor);
+
+        const newPages = document.createElement("th");
+        newPages.innerHTML = pagesInput.value;
+        bookListRow.appendChild(newPages);
+
+        bookList.appendChild(bookListRow);
     }
-        e.preventDefault();
-});
+})
