@@ -56,3 +56,33 @@ class Library {
         localStorage.library = JSON.stringify(this._library);
     }
 }
+
+class userInterface {
+    constructor(library) {
+        this._library = library;
+    }
+
+    addBookForm() {
+        const title = document.querySelector("#title").value;
+        const author = document.querySelector('#author').value;
+        const read = document.querySelector("#read").checked;
+        this._library.addBookToLibrary(title, author, read);
+        this._library.drawLibrary();
+        const popup = document.querySelector(".modal");
+        popup.classList.toggle("active");
+        popup.querySelectorAll("input").forEach(input => {
+            if (input.type == "checkbox") {
+                input.checked = false;
+            }
+            else {
+                input.value = '';
+            }
+        })
+    }
+}
+
+
+const library = new Library();
+const ui = new userInterface(library);
+
+library.drawLibrary();
