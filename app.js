@@ -9,7 +9,6 @@ class Book {
     }
   }
 
-
 function addBook() {
   const list = document.getElementById('book-list');
   const row = document.createElement("tr");
@@ -23,6 +22,10 @@ function addBook() {
                     `;
 
   list.appendChild(row);
+
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
+  document.getElementById('pages').value = '';
 }
 
 button.addEventListener("click", function (e) {
@@ -60,10 +63,4 @@ function update(event) {
   }
 }
 
-function clearFields() {
-    document.getElementById('title').value = '';
-    document.getElementById('author').value = '';
-    document.getElementById('pages').value = '';
-  }
-
-  
+localStorage.setItem()
