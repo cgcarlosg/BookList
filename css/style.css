@@ -1,18 +1,82 @@
-h1 {
+.contenedor {
+  background-color: white;
+  width: 70%;
+  margin: 200px auto 0 auto;
+  border-radius: 10px;
+  font-family: helvetica;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+}
+
+#header > button {
+  border: 0;
+  color: white;
+  background-color: cornflowerblue;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.contenedor > h1 {
   text-align: center;
 }
 
-.success,
-.error {
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  width: 100%;
+  display: flex;
+}
+
+td {
+  padding: 20px;
+}
+
+.completado {
+  background-color: lightgreen;
+}
+
+span {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+span:hover {
+  background-color: red;
   color: white;
-  padding: 5px;
-  margin: 5px 0 15px 0;
 }
 
-.success {
-  background: green;
+.exito {
+  background-color: green;
+  color: white;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  animation: slide-up 1s ease;
 }
 
-.error {
-  background: red;
+.fallo {
+  background-color: red;
+  color: white;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  animation: slide-up 1s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

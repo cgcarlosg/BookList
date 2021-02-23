@@ -6,47 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Book Library</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Book Library</h1>
-    <form id="book-form">
-      <div>
-        <label for="title">Title</label>
-        <input type="text" id="title" class="u-full-width">
-      </div>
-      <div>
-        <label for="author">Author</label>
-        <input type="text" id="author" class="u-full-width">
-      </div>
-      <div>
-        <label for="pages">Pages</label>
-        <input type="number" id="pages" class="u-full-width">
-      </div>
-      <div>
-        <label for="read">Read?</label>
-        <input type="checkbox" id="read">
-      </div>
-      <div>
-        <input type="submit" value="Submit" class="u-full-width">
-      </div>
-    </form>
-    <table class="u-full-width">
+
+
+  <div class="contenedor">
+    <h1>BOOK LIST</h1>
+    <div id="header">
+        <label style="flex-grow: 2" for="">Title:</label>
+        <input type="text" id="title">
+        <label style="flex-grow: 2" for="">Author:</label>
+        <input type="text" id="author">
+        <label style="flex-grow: 2" for="">Pages:</label>
+        <input type="text" id="pages">
+        <button id="boton">Añadir tarea</button>
+    </div>
+    <table id="tabla">
       <thead>
         <tr>
+          <th>Read</th>
           <th>Title</th>
           <th>Author</th>
           <th>Pages</th>
-          <th>Read</th>
           <th></th>
         </tr>
       </thead>
       <tbody id="book-list"></tbody>
+
     </table>
-  </div>
+</div>
 
   <script src="app.js"></script>
 </body>
