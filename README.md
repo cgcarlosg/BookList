@@ -7,7 +7,7 @@ Library in JavaScript is a practice project, which includes the user input funct
 The page was deployed to firebase: 
 
 
-![screenshot]()
+![screenshot](https://github.com/cgcarlosg/BookList/blob/Feature/css/screenshot.png)
 
 
 - [Live demo link](https://mylibrary-df7dd.web.app)
