@@ -19,7 +19,7 @@
   padding: 10px;
 }
 
-.contenedor > h1 {
+.container > h1 {
   text-align: center;
 }
 
@@ -37,7 +37,7 @@ td {
   padding: 20px;
 }
 
-.completado {
+.read {
   background-color: lightgreen;
 }
 
@@ -51,7 +51,7 @@ span:hover {
   color: white;
 }
 
-.exito {
+.success {
   background-color: green;
   color: white;
   height: 30px;
@@ -60,7 +60,7 @@ span:hover {
   animation: slide-up 1s ease;
 }
 
-.fallo {
+.unsuccess {
   background-color: red;
   color: white;
   height: 30px;

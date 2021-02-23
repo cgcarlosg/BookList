@@ -13,7 +13,7 @@
 <body>
 
 
-  <div class="contenedor">
+  <div class="container">
     <h1>BOOK LIST</h1>
     <div id="header">
         <label style="flex-grow: 2" for="">Title:</label>
@@ -22,16 +22,16 @@
         <input type="text" id="author">
         <label style="flex-grow: 2" for="">Pages:</label>
         <input type="text" id="pages">
-        <button id="boton">Añadir tarea</button>
+        <button id="button">Añadir tarea</button>
     </div>
-    <table id="tabla">
+    <table id="table">
       <thead>
         <tr>
           <th>Read</th>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Pages</th>
-          <th></th>
+          <th style="flex-grow: 2">Title</th>
+          <th style="flex-grow: 2">Author</th>
+          <th style="flex-grow: 2">Pages</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody id="book-list"></tbody>
