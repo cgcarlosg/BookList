@@ -1,54 +1,54 @@
 .read {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .modal {
-    display: flex;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: hsla(220, 10%, 10%, 50%);
-    transition: all 200ms;
-    overflow: hidden;
-    visibility: hidden;
+  display: flex;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(220, 10%, 10%, 50%);
+  transition: all 200ms;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .modal.active {
-    opacity: 1;
-    visibility: visible;
-    transition: all 200ms;
+  opacity: 1;
+  visibility: visible;
+  transition: all 200ms;
 }
 
 .modal-form {
-    max-width: 400px;
-    background-color: hsla(220, 10%, 90%);
-    padding: 3em;
-    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  max-width: 400px;
+  background-color: hsla(220, 10%, 90%);
+  padding: 3em;
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 table {
-    table-layout: fixed;
+  table-layout: fixed;
 }
 
 .read-status:hover {
-    background-color: #33C3F0;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
+  background-color: #33C3F0;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .read-status {
-    text-decoration: none;
+  text-decoration: none;
 }
