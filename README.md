@@ -4,9 +4,13 @@
 
 Library - Javascript
 Library in JavaScript is a practice project, which includes the user input functionality and managing the dynamically DOM manipulation. I used Javascript, HTML5 and CSS3, to implement it
-The page was deployed to firebase: https://mylibrary-df7dd.web.app
+The page was deployed to firebase: 
 
-website screenshots
+
+![screenshot]()
+
+
+- [Live demo link](https://mylibrary-df7dd.web.app)
 
 
 
@@ -34,9 +38,9 @@ Open related file by using text editor.
 Authors
 👤 Carlos Gutierrez
 
-GitHub: @cgcarlosg
-Twitter: @cgcarlosg1
-LinkedIn: carlos albenio gutierrez
+- GitHub:  [@cgcarlosg](https://github.com/cgcarlosg)
+- Twitter: [@cgcarlosg1](https://twitter.com/cgcarlosg1)
+- LinkedIn: [@carlosalbeniogutierrez](www.linkedin.com/in/carlosalbeniogutierrez)
 
 🤝 Contributing
 Contributions, issues and feature requests are welcome!
