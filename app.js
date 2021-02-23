@@ -14,7 +14,7 @@ function addBook() {
                     <td style="flex-grow: 2"> ${title.value} </td>
                     <td style="flex-grow: 2"> ${author.value} </td>
                     <td style="flex-grow: 2"> ${pages.value} </td>
-                    <td> <span onClick="deleteBook()"> X </span> </td>
+                    <td> <span onClick="javascript:(function() { this.event.target.parentElement.parentElement.remove(); })()"> X </span> </td>
                     `;
 
   list.appendChild(row);
@@ -44,10 +44,6 @@ function update() {
   } else {
     this.event.target.parentElement.parentElement.classList.remove('read');
   }
-}
-
-function deleteBook() {
-  this.event.target.parentElement.parentElement.remove();
 }
 
 button.addEventListener('click', () => {
