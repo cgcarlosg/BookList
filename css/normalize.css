@@ -28,8 +28,8 @@ audio,
 canvas,
 progress,
 video {
-display: inline-block;
-vertical-align: baseline;
+  display: inline-block;
+  vertical-align: baseline;
 }
 
 audio:not([controls]) {
@@ -59,7 +59,6 @@ b,
 strong {
   font-weight: bold;
 }
-
 
 dfn {
   font-style: italic;
@@ -121,7 +120,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -157,11 +156,13 @@ html input[disabled] {
   cursor: default;
 }
 
-button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
+button::-moz-focus-inner,
+
 
 input {
   line-height: normal;

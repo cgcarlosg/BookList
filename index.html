@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>Library</title>
   <meta name="description" content="">
-  <meta name="author" content="Luke Boland">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,6 +36,7 @@
         <tr>
           <th>Title</th>
           <th>Author</th>
+          <th>Pages</th>
           <th>Read</th>
           <th>Action</th>
         </tr>
@@ -56,8 +56,6 @@
     </div>
   </div>
 
-  <!-- Add book modal 
-  ------------------------------------------------- -->
   <div class="modal" id="add-book-modal">
     <div class="container modal-form">
       <form onsubmit="ui.addBookForm(); return false">
@@ -72,6 +70,12 @@
             <input type="text" placeholder="Author" class="u-full-width" id="author" required>
           </div>
         </div>
+
+        <div class="row">
+            <div>
+              <input type="text" placeholder="Pages" class="u-full-width" id="pages" required>
+            </div>
+          </div>
   
         <div class="row">
           <div class="read">
@@ -92,8 +96,5 @@
   </div>
 
   <script src="app.js"></script>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>

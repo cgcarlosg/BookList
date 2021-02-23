@@ -1,4 +1,3 @@
-// Event listeners
 document.querySelector("#add-book-btn").addEventListener('click', () => {
     document.querySelector("#add-book-modal").classList.toggle('active');
 })
@@ -8,9 +7,10 @@ document.querySelector("#add-book-modal #close").addEventListener('click', () =>
 })
 
 class Book {
-    constructor(title, author, read) {
+    constructor(title, author, pages, read) {
         this.title = title;
         this.author = author;
+        this.pages = pages;
         this.read = read;
     }
 }
@@ -20,8 +20,8 @@ class Library {
         this._library = (localStorage.library == undefined) ? [] : JSON.parse(localStorage.library);
     }
 
-    addBookToLibrary(title, author, read) {
-        this._library.push(new Book(title, author, read));
+    addBookToLibrary(title, author, pages, read) {
+        this._library.push(new Book(title, author, pages, read));
     }
 
     drawLibrary() {
@@ -32,6 +32,7 @@ class Library {
             table.innerHTML += `<tr>
             <td>${book.title}</td>
             <td>${book.author}</td>
+            <td>${book.pages}</td>
             <td><a href="#" class="read-status" data-value="${this._library.indexOf(book)}">${read}</span></td>
             <td><button data-value="${this._library.indexOf(book)}">Delete</button></td>
             </tr>`
@@ -65,8 +66,9 @@ class userInterface {
     addBookForm() {
         const title = document.querySelector("#title").value;
         const author = document.querySelector('#author').value;
+        const pages = document.querySelector('#pages').value;
         const read = document.querySelector("#read").checked;
-        this._library.addBookToLibrary(title, author, read);
+        this._library.addBookToLibrary(title, author, pages, read);
         this._library.drawLibrary();
         const popup = document.querySelector(".modal");
         popup.classList.toggle("active");
